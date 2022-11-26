@@ -50,5 +50,5 @@ function InsertCurrentPage(elementIDToInsertTo)
         justPageName = "index";
     }
 
-    InsertDocument("pagecontent/"+justPageName+".txt", elementIDToInsertTo);
+    InsertDocument("pagecontent/"+justPageName+".html", elementIDToInsertTo);
 }
