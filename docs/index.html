@@ -36,6 +36,11 @@
 			{
 				let pageName = window.location.pathname;
 				let justPageName = pageName.replace('.html','');
+				justPageName = pageName.replace('/','');
+
+				console.log("pageName: " + pageName);
+				console.log("justPageName: " + justPageName);
+
 				if(justPageName === "")
 				{
 					justPageName = "index";
