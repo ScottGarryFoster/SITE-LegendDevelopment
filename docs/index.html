@@ -6,58 +6,22 @@
 -->
 <html>
 	<head>
-		<script type="text/javascript">
-			function InsertDocument(documentName, elementIDToInsert)
-			{
-				if(!document.getElementById(elementIDToInsert))
-				{
-					console.log("[InsertDocument]: ID not found. ID: " + elementIDToInsert);
-					return;
-				}
-				let documentInsert = document.getElementById(elementIDToInsert);
-
-				const xhttp = new XMLHttpRequest();
-				xhttp.onload = function()
-				{
-					if(xhttp.status === 200)
-					{
-						documentInsert.innerHTML = this.responseText;
-					}
-					else
-					{
-						documentInsert.innerHTML = "<h2>Content not found?</h2><img src='images/dazedpug.png'>";
-					}
-				}
-				xhttp.open("GET", documentName, true);
-				xhttp.send();
-			}
-
-			function InsertCurrentPage(elementIDToInsertTo)
-			{
-				let pageName = window.location.pathname;
-				let justPageName = pageName.replace('.html','');
-
-				let regexForwardSlash = /(\/)*/g;
-				justPageName = pageName.replace(regexForwardSlash,'');
-
-				console.log("pageName: " + pageName);
-				console.log("justPageName: " + justPageName);
-
-				if(justPageName === "")
-				{
-					justPageName = "index";
-				}
-
-				InsertDocument("pagecontent/"+justPageName+".txt", elementIDToInsertTo);
-			}
-
-			InsertCurrentPage("");
-		</script>
-
-		<title>Legend Game Design and Development Document</title>
+		<script type="text/javascript" src="assets/js/documentmanager.js"></script>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
+		<script type="text/javascript">
+			InsertDocument('pagehead.html');
+		</script>
+
+		<title>Legend Game Design and Development Document</title>
+		<meta name="description" content="Design and development document for Legend Foretold.">
+		<meta name="keywords" content="Video Games,Developer,Portfolio,Unity,Unreal,OpenGL,DirectX,SDL,C++,C#">
+		<meta name="author" content="Scott Foster">
+
+		<meta property="og:title" content="Scott Foster">
+		<meta property="og:description" content="Design and development document for Legend Foretold.">
+		<!-- <meta property="og:image" content="https://scottgarryfoster.com/images/SquareImage.png"> -->
 	</head>
 	<body class="is-preload">
 
@@ -78,6 +42,12 @@
 
 							<!-- Content -->
 								<section>
+									<noscript>
+										<h2>This page needs scripts to run.</h2>
+										<p>Promise it does not track you it is simply a method to not host a database.</p>
+										<img src=\'https://legendforetold.dev/images/dazedpug.png\'>
+									</noscript>
+
 									<header class="main">
 										<h1>Generic</h1>
 									</header>
@@ -127,13 +97,13 @@
 					<div id="sidebar">
 						<div class="inner">
 
-							<!-- Search -->
+							<!-- Search
 								<section id="search" class="alt">
 									<form method="post" action="#">
 										<input type="text" name="query" id="query" placeholder="Search" />
 									</form>
 								</section>
-
+-->
 							<!-- Menu -->
 								<nav id="menu">
 									<header class="major">
