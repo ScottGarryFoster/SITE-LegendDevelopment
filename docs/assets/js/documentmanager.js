@@ -42,9 +42,6 @@ function InsertCurrentPage(elementIDToInsertTo)
     let regexForwardSlash = /(\/)*/g;
     justPageName = pageName.replace(regexForwardSlash,'');
 
-    console.log("pageName: " + pageName);
-    console.log("justPageName: " + justPageName);
-
     if(justPageName === "")
     {
         justPageName = "index";
