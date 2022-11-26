@@ -1,28 +1,4 @@
 /**
- * Fetches the given page and writes it into place.
- * Will insert a 404 image if not found.
- * @param {string} documentName - The document to fetch
- */
-function InsertDocument(documentName)
-{
-    const xhttp = new XMLHttpRequest();
-    xhttp.onload = function()
-    {
-        if(xhttp.status === 200)
-        {
-            document.write(xhttp.responseText);
-        }
-        else
-        {
-            document.write("<h2>Content not found?</h2>" +
-                "<img src='https://legendforetold.dev/images/dazedpug.png'>");
-        }
-    }
-    xhttp.open("GET", documentName, true);
-    xhttp.send();
-}
-
-/**
  * Fetches the given page and replaces the ID.
  * Will insert a 404 image if not found.
  * @param {string} documentName - The document to fetch
