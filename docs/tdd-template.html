@@ -33,7 +33,7 @@
 		<meta property="og:description" content="Design and development document for Legend Foretold.">
 		<meta property="og:image" content="https://legendforetold.dev/images/ProjectLogos/HalfSquareGrey.png">
 	</head>
-	<body class="is-preload" id="currentbody">
+	<body class="is-preload">
 
 		<!-- Wrapper -->
 			<div id="wrapper">
@@ -82,13 +82,13 @@
 							<!-- Menu -->
 								<nav id="menu">
 									<script type="text/javascript">
-										InsertDocument('navigation.html', 'menu');
+										InsertDocument('navigation.html', 'menu', RedoMain);
 									</script>
 								</nav>
 
 							<nothing id="belownav">
 								<script type="text/javascript">
-									InsertDocument('belownavigation.html', 'belownav', RedoMain);
+									InsertDocument('belownavigation.html', 'belownav');
 								</script>
 							</nothing>
 
@@ -110,12 +110,10 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 
-
 		<nothing id="beloweverything">
 			<script type="text/javascript">
 				InsertDocument('beloweverything.html', 'beloweverything');
 			</script>
 		</nothing>
-
 	</body>
 </html>

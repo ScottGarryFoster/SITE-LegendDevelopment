@@ -3,8 +3,9 @@
  * Will insert a 404 image if not found.
  * @param {string} documentName - The document to fetch
  * @param {string} elementIDToInsert - The element on the page to replace
+ * @param {function} callback - I called if successful
  */
-function InsertDocument(documentName, elementIDToInsert)
+function InsertDocument(documentName, elementIDToInsert, callback = null)
 {
     if(!document.getElementById(elementIDToInsert))
     {
@@ -19,6 +20,10 @@ function InsertDocument(documentName, elementIDToInsert)
         if(xhttp.status === 200)
         {
             documentInsert.innerHTML = this.responseText;
+            if(callback != null)
+            {
+                callback();
+            }
         }
         else
         {
@@ -37,10 +42,19 @@ function InsertDocument(documentName, elementIDToInsert)
 function InsertCurrentPage(elementIDToInsertTo)
 {
     let pageName = window.location.pathname;
-    let justPageName = pageName.replace('.html','');
+    let justPageName = pageName;
+
+    if(pageName.search("SITE-LegendDevelopment") > -1)
+    {
+        let regexEverythingToPage = /.*\//g;
+        justPageName = pageName.replace(regexEverythingToPage,'');
+    }
+
+    let regexEverythingAfterHtml = /.html(.*)/g;
+    justPageName = justPageName.replace(regexEverythingAfterHtml,'');
 
     let regexForwardSlash = /(\/)*/g;
-    justPageName = pageName.replace(regexForwardSlash,'');
+    justPageName = justPageName.replace(regexForwardSlash,'');
 
     if(justPageName === "")
     {
