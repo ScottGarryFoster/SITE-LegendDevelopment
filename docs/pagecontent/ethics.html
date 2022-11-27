@@ -1,0 +1,104 @@
+<section>
+    <header class="main">
+        <h1>Ethics</h1>
+    </header>
+
+    <p>
+        Software is important. The software we make with <a href="https://fated.quest" target="_blank">Fated.Quest</a>
+        may run on our customer's computers,
+        our Linux servers and interact with users data. This level of power grants the software great
+        power and with great power comes great responsibility.
+        <a href="https://fated.quest" target="_blank">Fated.Quest</a> developers uphold a set of
+        basic ethical principles with our development to ensure our software is developed ethically
+        and that we act professionally. These are ethics in terms of ‘work ethics’ and professional
+        ethics to ensure our code is of a particular standard, we work to a particular expectation
+        and that our development is ethical to our customers / colleagues.
+    </p>
+
+    <p>
+        These are largely borrowed from a veteran in the software industry
+        Robert Martin (Clean Coder) which you can
+        <a href="https://www.youtube.com/watch?v=Qjywrq2gM8o" target="_blank">watch here</a>.
+    </p>
+
+    <hr class="major" />
+
+    <h2>1. Only quality is shipped</h2>
+
+    <p>
+        Software maybe an unknown beast at times however ethically speaking when it comes to releasing code
+        to the public, all of it should to the best of the developers knowledge be quality code.
+        We will not ship junk and we do not test junk code on live servers first - test on safe servers first.
+    </p>
+
+    <hr class="major" />
+
+    <h2>2. Continuous Improvement</h2>
+
+    <p>
+        As changes are made to an existing system or to replace an existing system it is expected that the result is
+        improvement. We do not expect that changes to a given system results in regression or loss of features in a
+        given area. This should be applicable throughout and with third party libraries this maybe unavoidable
+        (with their support loss) however internally there is no reason for our internal development to not
+        continually improve.
+    </p>
+
+    <hr class="major" />
+
+    <h2>3. Inexpensive adaptability</h2>
+
+    <p>
+        When making changes, new features or new products the cost (time) associated with these changes is
+        proportional to the request. It is expected that upon a message in a command changing this cost
+        might be quite small and that adding a plugin to record every block placed outputting to a file
+        would become larger. In large systems however it may become the case that changes which appear
+        small may estimate large and this is a product of bad architecture. When developing software
+        one must consider how it might be changed and altered to ensure that future changes are
+        proportional to request.
+    </p>
+
+    <hr class="major" />
+
+    <h2>4. Solve problems don’t create them</h2>
+
+    <p>
+        In anything deployed on our servers or released, the reasoning behind the feature should be examined to be
+        solving a particular problem and not indirectly creating one. Creating problems is not an element of
+        development one generally does on purpose, it is expected developers do not intentionally create direct
+        problems however it is also expected that developers examine their changes beyond direct implications
+        to ensure that there are no indirect problems caused by their code.
+    </p>
+
+    <p>
+        For instance, stopping players from entering a district in the game until a flag is set may be approached
+        in several ways some of which create problems such as checking the player’s location every second to
+        remove them.  Changes to existing features
+        may lead to problems or issues which are avoidable if the issue is well-thought-out or simply
+        not completed due to integrity.
+    </p>
+
+    <hr class="major" />
+
+    <h2>5. We will not dump on QA</h2>
+
+    <p>
+        Quality assurance and in this context the alpha and beta testers at large,
+        are a part of the development process to help avoid buggy code reaching the
+        production servers (in a dangerous state) or the public. QA are not a replacement
+        for testing code nor should they actually find anything except perhaps cosmetic
+        changes.
+    </p>
+
+    <p>
+        Ideally we should get as much advice on cosmetic, functional and overall changes as possible to avoid this.
+        When developing and before QA thorough testing should take place to ensure anything which is picked up is
+        unexpected by the developers.
+    </p>
+
+
+    <hr class="major" />
+    <p>
+        Written by Scott Foster | Last Edited 27th November 2022
+    </p>
+
+</section>
