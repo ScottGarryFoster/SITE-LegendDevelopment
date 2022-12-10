@@ -82,13 +82,13 @@
 							<!-- Menu -->
 								<nav id="menu">
 									<script type="text/javascript">
-										InsertDocument('navigation.html', 'menu');
+										InsertDocument('navigation.html', 'menu', RedoMainC);
 									</script>
 								</nav>
 
 							<nothing id="belownav">
 								<script type="text/javascript">
-									InsertDocument('belownavigation.html', 'belownav', RedoMain);
+									InsertDocument('belownavigation.html', 'belownav');
 								</script>
 							</nothing>
 
@@ -109,6 +109,9 @@
 			<script src="assets/js/browser.min.js"></script>
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
+			<script type="text/javascript">
+				RedoMainB();
+			</script>
 
 
 		<nothing id="beloweverything">
